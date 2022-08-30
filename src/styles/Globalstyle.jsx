@@ -25,6 +25,9 @@ img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
+a{
+  text-decoration: none;
+}
 
 input, button, textarea, select {
   font: inherit;
@@ -32,6 +35,10 @@ input, button, textarea, select {
 
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+}
+ul > li{
+  margin: 0;
+  padding: 0;
 }
 
 #root, #__next {
