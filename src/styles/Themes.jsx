@@ -10,5 +10,6 @@ export const THEME = {
     colorAqua: "#d2f8f0",
     colorPeach: "#fddfd8",
     colorCream: "#fdeacc",
+    colorTwo: "#ededf1",
   },
 };

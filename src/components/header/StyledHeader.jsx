@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { THEME } from "./../../styles/Themes";
 
 export const StyledHeader = styled.div`
+  margin: 40px 0 calc(45px + 3vh);
   padding: 0 80px;
   .row {
     display: flex;
@@ -17,23 +19,48 @@ export const StyledHeader = styled.div`
           display: flex;
           align-items: center;
           justify-content: center;
+          padding-left: 0;
+          .menu_item {
+            font-size: 19px;
+            display: inline-block;
+            a {
+              line-height: 1.5;
+              position: relative;
+              margin: 0 30px 0 0;
+              padding: 0;
+              font-size: 19px;
+              font-weight: 900;
+              color: ${THEME.colors.primary};
+            }
+          }
           .dropdown {
             position: relative;
-            .sub_menu {
-              visibility: hidden;
-              position: absolute;
-              top: 20px;
-              left: 0;
-              opacity: 0;
-              transition: all 0.3s ease-in-out;
-              height: 0;
+            svg {
+              cursor: pointer;
             }
-            &:hover {
-              .sub_menu {
-                visibility: visible;
-                opacity: 1;
-                height: auto;
+
+            .sub_menu {
+              margin-left: 0;
+              padding-left: 0;
+              position: absolute;
+              left: 0;
+              top: 40px;
+              padding: 20px 20px 15px 26px;
+              min-width: 120px;
+              background-color: ${THEME.colors.colorTwo};
+              border-radius: calc(22px / 2);
+              z-index: 99;
+              visibility: hidden;
+              opacity: 0;
+              transform: translateX(-27px);
+              .sub_menu_item {
+                position: relative;
+                margin-bottom: 8px;
               }
+            }
+            .dropdown_handle {
+              visibility: visible;
+              opacity: 1;
             }
           }
         }
@@ -54,6 +81,21 @@ export const StyledHeader = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        .search_icon {
+          cursor: pointer;
+        }
+        .sign_in {
+          margin: 0 30px;
+          line-height: 1.5;
+          position: relative;
+          padding: 0;
+          font-size: 19px;
+          display: inline-block;
+          font-weight: 900;
+          a {
+            color: ${THEME.colors.primary};
+          }
+        }
       }
     }
   }

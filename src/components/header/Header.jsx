@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { StyledHeader } from "./StyledHeader";
 import { Link } from "react-router-dom";
 import { HiDotsHorizontal } from "react-icons/hi";
@@ -8,6 +8,15 @@ import logo from "./../../../public/images/okiro.svg";
 import { Button } from "../Buttons/Button";
 
 export const Header = () => {
+  const dropdown = useRef();
+  const handleDropdown = () => {
+    dropdown.current.classList.toggle("dropdown_handle");
+    console.log(dropdown.current);
+  };
+  // document.body.addEventListener("click", () => {
+  //   dropdown.current.classList.remove("dropdown_handle");
+  // });
+
   return (
     <StyledHeader>
       <div className="row">
@@ -24,8 +33,12 @@ export const Header = () => {
                 <Link to="">Style Guide</Link>
               </li>
               <li className="menu_item dropdown">
-                <HiDotsHorizontal />
-                <ul className="sub_menu">
+                <HiDotsHorizontal
+                  size="30px"
+                  fontWeight="900"
+                  onClick={handleDropdown}
+                />
+                <ul ref={dropdown} className="sub_menu">
                   {SUBMENU.map(({ to, name }, i) => {
                     return (
                       <li key={i} className="sub_menu_item">
@@ -46,7 +59,7 @@ export const Header = () => {
         <div className="header_cta">
           <div className="header_cta_wrapper">
             <div className="search_icon">
-              <FaSearch />
+              <FaSearch size="18px" fontWeight="900" />
             </div>
             <div className="sign_in">
               <Link to="/">Sign in</Link>

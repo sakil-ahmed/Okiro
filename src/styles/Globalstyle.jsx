@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { THEME } from "./Themes";
 
 export const GlobalStyles = createGlobalStyle`
 *, *::before, *::after {
@@ -19,6 +20,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: 'Nunito', sans-serif;
+  color: ${THEME.colors.primary};
 }
 
 img, picture, video, canvas, svg {
