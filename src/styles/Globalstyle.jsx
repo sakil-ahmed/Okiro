@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { THEME } from "./Themes";
+import { media } from "./Respinsive";
 
 export const GlobalStyles = createGlobalStyle`
 *, *::before, *::after {
@@ -12,7 +13,6 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 html, body {
-  height: 100%;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -23,7 +23,7 @@ body {
   color: ${THEME.colors.primary};
 }
 
-img, picture, video, canvas, svg {
+img, picture, video, canvas {
   display: block;
   max-width: 100%;
 }
@@ -38,21 +38,44 @@ input, button, textarea, select {
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
+ul{
+  margin: 0;
+  padding: 0;
+}
 ul > li{
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 #root, #__next {
   isolation: isolate;
 }
 
+.header_container{
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  ${media.up("xxl")}{
+    max-width: 1440px;
+    width: 100%;
+  }
+}
+
 .container{
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0 15px ;
   
+}
+/* custon class */
+.display_flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${THEME.colors.bodyColor};
 }
 
 `;

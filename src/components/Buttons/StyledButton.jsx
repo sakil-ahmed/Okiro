@@ -19,4 +19,8 @@ export const StyledBtn = styled.div`
       background: #535ffd;
     }
   }
+  .mobile_btn {
+    padding: 8px 10px;
+    font-size: 16px;
+  }
 `;

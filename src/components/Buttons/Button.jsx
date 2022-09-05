@@ -6,7 +6,7 @@ export const Button = (props) => {
   const { type, classname, btntext, to } = props;
   return (
     <StyledBtn>
-      <Link to="" className={`btn ${classname}`}>
+      <Link to="/" className={`btn ${classname}`}>
         {btntext}
       </Link>
     </StyledBtn>

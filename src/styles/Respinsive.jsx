@@ -3,6 +3,7 @@ const breakPoint = {
   md: 768,
   lg: 1024,
   xl: 1200,
+  xxl: 1919,
 };
 
 export const media = {
