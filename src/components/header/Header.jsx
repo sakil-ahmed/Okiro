@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { StyledHeader } from "./StyledHeader";
 import { Link } from "react-router-dom";
 import { HiDotsHorizontal } from "react-icons/hi";
@@ -21,9 +21,12 @@ export const Header = () => {
     menuClose.current.classList.toggle("close-toggle");
     menu_open.current.classList.toggle("menu_open");
   };
-  // document.body.addEventListener("click", () => {
-  //   dropdown.current.classList.remove("dropdown_handle");
-  // });
+
+  // search handeller
+  const [openSearch, setOpenSearch] = useState(false);
+  const handleSearchOpen = () => {
+    setOpenSearch(!openSearch);
+  };
 
   return (
     <StyledHeader>
@@ -75,14 +78,14 @@ export const Header = () => {
               <span></span>
             </div>
             <div ref={menu_open} className="mobile_menu_item">
-              <MobileMenu />
+              <MobileMenu handleSearchOpen={handleSearchOpen} />
             </div>
           </div>
           {/* Header Cta */}
           <div className="header_cta">
             <div className="header_cta_wrapper">
-              <div className="search_icon">
-                <FaSearch size="15px" fontWeight="900" />
+              <div className="search_icon" onClick={handleSearchOpen}>
+                <FaSearch size="20px" fontWeight="900" />
               </div>
               <div className="sign_in">
                 <Link to="/">Sign in</Link>
@@ -93,8 +96,12 @@ export const Header = () => {
             </div>
           </div>
           {/* Search bar */}
-          <div className="popup_search_overlay">
-            <Search />
+          <div
+            className={
+              openSearch ? "popup_search_overlay open" : "popup_search_overlay"
+            }
+          >
+            <Search handleSearchOpen={handleSearchOpen} />
           </div>
         </div>
       </div>

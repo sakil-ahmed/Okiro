@@ -51,7 +51,7 @@ const Mobile = [
   },
 ];
 
-export const MobileMenu = () => {
+export const MobileMenu = ({ handleSearchOpen }) => {
   return (
     <StyledMmenu>
       <ul>
@@ -65,7 +65,7 @@ export const MobileMenu = () => {
         <li>
           <Button btntext="Sign up" to="/" classname="mobile_btn" />
         </li>
-        <li className="search_open">
+        <li className="search_open" onClick={handleSearchOpen}>
           <span>Search</span>
           <FaSearch size="18px" fontWeight="900" />
         </li>

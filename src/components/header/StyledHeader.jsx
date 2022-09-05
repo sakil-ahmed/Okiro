@@ -6,7 +6,6 @@ export const StyledHeader = styled.div`
   margin: 40px 0 calc(45px + 3vh);
   ${media.down("md")} {
     margin: 20px 0;
-    position: relative;
   }
   .row {
     display: flex;
@@ -82,6 +81,7 @@ export const StyledHeader = styled.div`
               .sub_menu_item {
                 position: relative;
                 margin-bottom: 8px;
+                white-space: nowrap;
               }
             }
             .dropdown_handle {
@@ -176,6 +176,11 @@ export const StyledHeader = styled.div`
         justify-content: center;
         .search_icon {
           cursor: pointer;
+          height: fit-content;
+          width: fit-content;
+          svg {
+            margin-bottom: -5px;
+          }
         }
         .sign_in {
           margin: 0 30px;
@@ -191,6 +196,7 @@ export const StyledHeader = styled.div`
         }
       }
     }
+    /* Search */
     .popup_search_overlay {
       position: absolute;
       top: 0;
@@ -203,6 +209,13 @@ export const StyledHeader = styled.div`
       text-align: center;
       background-color: rgba(0, 0, 0, 0.6);
       color: ${THEME.colors.bodyColor};
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+    }
+    .open {
+      visibility: visible;
+      opacity: 1;
     }
   }
 `;
