@@ -29,6 +29,7 @@ img, picture, video, canvas {
 }
 a{
   text-decoration: none;
+  color: ${THEME.colors.primary};
 }
 
 input, button, textarea, select {
@@ -53,8 +54,8 @@ ul > li{
 }
 
 .header_container{
-  padding: 20px;
-  max-width: 1200px;
+  padding: 0 20px;
+  max-width: 1280px;
   width: 100%;
   margin: 0 auto;
   ${media.up("xxl")}{
@@ -67,7 +68,7 @@ ul > li{
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px ;
+  padding: 0 20px ;
   
 }
 /* custon class */

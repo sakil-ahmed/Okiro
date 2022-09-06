@@ -85,6 +85,12 @@ export const StyledFooter = styled.div`
         .footer_nav_column {
           width: 180px;
           margin-bottom: 30px;
+          ${media.down("md")} {
+            flex: 1 0 120px;
+            width: 100%;
+            max-width: 170px;
+            margin-bottom: 30px;
+          }
           small {
             font-size: 10px;
             line-height: 1;
@@ -93,6 +99,11 @@ export const StyledFooter = styled.div`
             padding: 0 20px 0 15%;
             letter-spacing: 4px;
             text-transform: uppercase;
+            ${media.down("md")} {
+              margin-bottom: 20px;
+              text-indent: 4px;
+              padding-right: 0;
+            }
           }
           ul {
             margin: 0;
@@ -120,6 +131,7 @@ export const StyledFooter = styled.div`
       ${media.down("md")} {
         text-align: center;
         max-width: 340px;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
       }

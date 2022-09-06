@@ -40,7 +40,7 @@ export const Header = () => {
                   <Link to="">Home</Link>
                 </li>
                 <li className="menu_item dot">
-                  <Link to="">Membership</Link>
+                  <Link to="membership">Membership</Link>
                 </li>
                 <li className="menu_item dot">
                   <Link to="">Style Guide</Link>
