@@ -47,7 +47,7 @@ export const Item = () => {
           <div className="item-authors">
             <Link to="">Victoria West</Link>,<Link to="">Lauren Langford</Link>
             <div className="item-time">
-              <time datetime="2020-09-30">September 30, 2020</time>∙ 3 minutes
+              <time dateTime="2020-09-30">September 30, 2020</time>∙ 3 minutes
               read
             </div>
           </div>
