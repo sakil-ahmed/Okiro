@@ -1,10 +1,14 @@
 import styled from "styled-components";
 import { THEME } from "./../../styles/Themes";
+import { media } from "./../../styles/Respinsive";
 
 export const StyledItem = styled.div`
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+
+  ${media.down("md")} {
+    flex-wrap: wrap;
+  }
   .item-container {
     display: flex;
     /* max-width: 60%; */
@@ -13,21 +17,50 @@ export const StyledItem = styled.div`
     flex-direction: row;
     margin: 0 20px;
     flex: 0 0 50%;
+    ${media.down("md")} {
+      flex-basis: 100%;
+      margin-left: 0;
+    }
     .item-image {
       position: relative;
       min-height: 600px;
       height: 100%;
       margin-right: 5%;
+
+      ${media.down("md")} {
+        flex-basis: 100%;
+        margin-right: 0;
+        height: 450px;
+        margin-bottom: 20px;
+      }
+      ${media.down("lg")} {
+        flex-basis: 100%;
+        margin-right: 0;
+        min-height: 500px;
+      }
+      ${media.down("sm")} {
+        height: 350px;
+      }
       img {
         border-radius: calc(22px * 2);
         height: 100%;
         width: 100%;
         object-fit: cover;
         min-height: 600px;
+        ${media.down("lg")} {
+          min-height: 450px;
+        }
+        ${media.down("sm")} {
+          min-height: 350px;
+        }
       }
     }
   }
   .item-content {
+    ${media.down("sm")} {
+      padding-right: calc(10px + 10px);
+      padding-left: calc(10px + 10px);
+    }
     .item-tags {
       margin-bottom: 22px;
     }
@@ -40,6 +73,18 @@ export const StyledItem = styled.div`
       font-weight: 900;
       max-width: 452px;
       width: 100%;
+      ${media.down("lg")} {
+        font-size: 40px;
+      }
+      ${media.down("md")} {
+        font-size: 48px;
+        max-width: 100%;
+        margin: 5px 0 25px;
+      }
+      ${media.down("sm")} {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
     }
     .item-excerpt {
       max-width: 480px;
@@ -53,6 +98,13 @@ export const StyledItem = styled.div`
       span {
         font-size: 18px;
         font-weight: 800;
+      }
+      ${media.down("lg")} {
+      }
+      ${media.down("md")} {
+        max-width: 100%;
+        margin-bottom: 25px;
+        padding-right: 20px;
       }
     }
     .item-meta {
