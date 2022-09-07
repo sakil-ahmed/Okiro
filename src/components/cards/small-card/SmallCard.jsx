@@ -6,6 +6,7 @@ export const SmallCard = (props) => {
   const { img, title, author_1, author_2, classname } = props;
   return (
     <CardStyled>
+      <Link to="/"></Link>
       <div className={`item-section post tag-story ${classname}`}>
         <Link to=""></Link>
         <div className="global-image">

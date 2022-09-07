@@ -38,6 +38,7 @@ export const CardStyled = styled.article`
     }
   }
   .item-section {
+    cursor: pointer;
     position: relative;
     flex: 1 0 calc(173px - 20px * 2);
     box-sizing: border-box;
@@ -75,6 +76,11 @@ export const CardStyled = styled.article`
         font-weight: 900;
         display: flex;
         flex-direction: column;
+        a {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
         ${media.down("lg")} {
           display: none;
         }

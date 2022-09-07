@@ -1,6 +1,6 @@
 export const CardData = [
   {
-    img: "images/photo-1557800636-894a64c1696f--4iNIme.jpeg",
+    img: "images/photo-1557800636-894a64c1696f.jpeg",
     title: "Don’t be afraid",
     author_1: "Megan Anderson",
     author_2: "Lauren Langford",

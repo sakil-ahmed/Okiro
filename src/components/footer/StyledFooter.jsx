@@ -116,7 +116,7 @@ export const StyledFooter = styled.div`
                 font-weight: bold;
                 font-size: 16px;
                 &:hover {
-                  border-bottom: 1px solid ${THEME.colors.primary};
+                  text-decoration: underline;
                 }
               }
             }

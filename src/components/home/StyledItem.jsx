@@ -109,9 +109,9 @@ export const StyledItem = styled.div`
     }
     .item-meta {
       display: flex;
-      flex-wrap: wrap;
+      /* flex-wrap: wrap; */
       margin-top: 40px;
-      align-items: center;
+      /* align-items: center; */
       .item-profile-image {
         display: flex;
         .global-image {
@@ -137,6 +137,9 @@ export const StyledItem = styled.div`
           font-size: 16px;
           line-height: 1.2;
           font-weight: 800;
+          ${media.down("sm")} {
+            font-size: 14px;
+          }
         }
         .item-time {
           font-size: 15px;
