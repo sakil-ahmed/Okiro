@@ -19,18 +19,18 @@ export const GlobalCard = () => {
       classname: "tag_hash_post_card_rose",
     },
     {
+      img: "images/photo-1580636521086-7b0c742dd567.jpeg",
+      title: "Cuisine is a mirror, reflecting the culture",
+      author_1: "Victoria West",
+      author_2: "Patricia Jenkins",
+      classname: "tag_hash_post_card_aqua",
+    },
+    {
       img: "images/photo-1530653333484-d02d0faff9bf.jpeg",
       title: "I always loved aesthetics",
       author_1: "Hannah Weastell",
       author_2: "Victoria West",
       classname: "tag_hash_post_card_sand",
-    },
-    {
-      img: "images/photo-1590374504314-295374f053e4.jpeg",
-      title: "Creating deluxe drink is like playing a sport",
-      author_1: "Victoria West",
-      author_2: "",
-      classname: "tag_hash_post_card_aqua",
     },
   ];
   return (

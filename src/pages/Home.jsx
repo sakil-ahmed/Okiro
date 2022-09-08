@@ -6,6 +6,8 @@ import itemimg from "./../../public/images/item.svg";
 import { SmallCard } from "../components/cards/small-card/SmallCard";
 import { CardData } from "./../components/cards/small-card/CardData";
 import { GlobalCard } from "../components/home/globalCard/GlobalCard";
+import { cardData } from "./../components/cards/big-card/Carddata";
+import { BigCard } from "../components/cards/big-card/BigCard";
 
 export const Home = () => {
   return (
@@ -44,11 +46,49 @@ export const Home = () => {
           </article>
         </div>
       </div>
+      {/* post */}
+      <div className="global_post_section">
+        <div className="container">
+          <div className="row">
+            {cardData.map((props, i) => {
+              const {
+                img,
+                title,
+                author_1,
+                author_2,
+                classname,
+                btntext,
+                btnclassname,
+              } = props;
+              return (
+                <article key={i} className={classname}>
+                  <BigCard
+                    img={img}
+                    title={title}
+                    author_1={author_1}
+                    author_2={author_2}
+                    classname={classname}
+                    btntext={btntext}
+                    btnclassname={btnclassname}
+                  />
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+      {/* post */}
 
       {/* Global Section */}
       <div className="global_section">
         <div className="container">
-          <GlobalCard />
+          <h2 className="global-label global-zigzag">
+            Story
+            <img src={itemimg} alt="" />
+          </h2>
+          <div className="row">
+            <GlobalCard />
+          </div>
         </div>
       </div>
       {/* Global Section */}
