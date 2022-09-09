@@ -142,5 +142,34 @@ export const StyledMemberShip = styled.div`
         box-shadow: none;
       }
     }
+    .membership-switch[data-active-price="monthly"]::before {
+      transform: translateX(-100%);
+    }
+    .membership-switch[data-active-price="monthly"] button:first-of-type,
+    .membership-switch[data-active-price="yearly"]
+      button:first-of-type
+      + button {
+      color: #fff;
+    }
+
+    /* Membership Card Style */
+
+    .membership-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .global-question {
+      font-size: 13px;
+      display: block;
+      text-align: center;
+      margin-bottom: 5vh;
+      a {
+        font-weight: 900;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 `;

@@ -4,6 +4,7 @@ import { media } from "./../../styles/Respinsive";
 
 export const StyledFooter = styled.div`
   .footer_section {
+    margin: 60px auto 0;
     .footer_wrap {
       display: flex;
       position: relative;
@@ -122,6 +123,16 @@ export const StyledFooter = styled.div`
             }
           }
         }
+      }
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 1px;
+        content: "";
+        border-radius: 100px;
+        background-color: rgba(0, 0, 0, 0.06);
       }
     }
     .footer_copyright {

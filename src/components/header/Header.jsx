@@ -8,6 +8,7 @@ import logo from "./../../../public/images/okiro.svg";
 import { Button } from "../Buttons/Button";
 import { MobileMenu } from "./mobile/MobileMenu";
 import { Search } from "./search/Search";
+import { useEffect } from "react";
 
 export const Header = () => {
   const dropdown = useRef();
@@ -27,6 +28,26 @@ export const Header = () => {
   const handleSearchOpen = () => {
     setOpenSearch(!openSearch);
   };
+  useEffect(() => {
+    if (openSearch === true) {
+      document.body.style.overflow = "hidden";
+      document.body.style.marginRight = "17px";
+    } else {
+      document.body.style.overflow = "auto";
+      document.body.style.marginRight = "0";
+    }
+    /************************************************************************
+     * If the screen is less than 768px, then the body margin-right is set to 0.
+     **/
+    const mobileDevice = (mobile) => {
+      if (mobile.matches) {
+        document.body.style.marginRight = "0";
+      }
+    };
+    let mobile = window.matchMedia("(max-width: 768px)");
+    mobileDevice(mobile);
+    mobile.addEventListener("", mobileDevice);
+  }, [openSearch]);
 
   return (
     <StyledHeader>

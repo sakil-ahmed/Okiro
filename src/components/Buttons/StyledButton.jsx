@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { THEME } from "./../../styles/Themes";
+import { media } from "./../../styles/Respinsive";
 
 export const StyledBtn = styled.div`
   .btn {
@@ -22,5 +23,12 @@ export const StyledBtn = styled.div`
   .mobile_btn {
     padding: 8px 10px;
     font-size: 16px;
+  }
+  .pricing-Btn {
+    padding: 22px 26px;
+    ${media.down("xsm")} {
+      font-size: 16px;
+      padding: 18px 20px;
+    }
   }
 `;
