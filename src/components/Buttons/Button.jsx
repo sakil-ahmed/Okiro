@@ -6,7 +6,7 @@ export const Button = (props) => {
   const { classname, btntext, path } = props;
   return (
     <StyledBtn>
-      <Link to="signup" className={`btn ${classname}`}>
+      <Link to="/signup" className={`btn ${classname}`}>
         {btntext}
       </Link>
     </StyledBtn>

@@ -18,7 +18,11 @@ export const Signin = () => {
               <img src={logo} alt="" />
             </Link>
           </div>
-          <GlobalForm heading="Sign in to" btntext="Send login link" />
+          <GlobalForm
+            heading="Sign in to"
+            btntext="Send login link"
+            to="/signup"
+          />
         </div>
       </div>
     </StyledSignin>

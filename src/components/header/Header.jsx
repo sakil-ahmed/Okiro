@@ -58,13 +58,13 @@ export const Header = () => {
             <nav className="nav">
               <ul className="menu">
                 <li className="menu_item dot">
-                  <Link to="">Home</Link>
+                  <Link to="/">Home</Link>
                 </li>
                 <li className="menu_item dot">
-                  <Link to="membership">Membership</Link>
+                  <Link to="/membership">Membership</Link>
                 </li>
                 <li className="menu_item dot">
-                  <Link to="">Style Guide</Link>
+                  <Link to="/guide">Style Guide</Link>
                 </li>
                 <li className="menu_item dropdown">
                   <HiDotsHorizontal
@@ -109,7 +109,7 @@ export const Header = () => {
                 <FaSearch size="20px" fontWeight="900" />
               </div>
               <div className="sign_in">
-                <Link to="signin">Sign in</Link>
+                <Link to="/signin">Sign in</Link>
               </div>
               <div className="sign_up">
                 <Button btntext="Sign up" path="signup" />

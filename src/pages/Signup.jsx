@@ -20,6 +20,7 @@ export const Signup = () => {
             heading="Get started with"
             name="name"
             btntext="Continue"
+            to="/signin"
           />
         </div>
       </div>

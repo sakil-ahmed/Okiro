@@ -65,6 +65,10 @@ export const StyledForm = styled.div`
       background-color: ${THEME.colors.btnPrimary};
       margin: 0 auto;
       margin-top: 4vh;
+      ${media.down("xsm")} {
+        font-size: 16px;
+        padding: 18px 20px;
+      }
     }
     .global-question {
       font-size: 13px;

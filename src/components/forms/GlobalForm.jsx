@@ -3,7 +3,7 @@ import { StyledForm } from "./Styledform";
 import { Link } from "react-router-dom";
 
 export const GlobalForm = (props) => {
-  const { heading, name, btntext } = props;
+  const { heading, name, btntext, to } = props;
   return (
     <StyledForm>
       <form action="">
@@ -22,7 +22,7 @@ export const GlobalForm = (props) => {
         </button>
         <small className="global-question">
           Already have an account?
-          <Link to="signin">Sign in</Link>
+          <Link to={to}>Sign in</Link>
         </small>
       </form>
     </StyledForm>

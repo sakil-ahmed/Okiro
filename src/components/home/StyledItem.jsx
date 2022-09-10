@@ -94,6 +94,7 @@ export const StyledItem = styled.div`
         transform: translateX(-3px);
         opacity: 0.1;
         margin-bottom: 10px;
+        display: block;
       }
       span {
         font-size: 18px;
