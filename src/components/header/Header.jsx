@@ -109,10 +109,10 @@ export const Header = () => {
                 <FaSearch size="20px" fontWeight="900" />
               </div>
               <div className="sign_in">
-                <Link to="/">Sign in</Link>
+                <Link to="signin">Sign in</Link>
               </div>
               <div className="sign_up">
-                <Button btntext="Sign up" />
+                <Button btntext="Sign up" path="signup" />
               </div>
             </div>
           </div>

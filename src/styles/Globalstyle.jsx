@@ -24,7 +24,7 @@ body {
 }
 
 img, picture, video, canvas {
-  display: block;
+ 
   max-width: 100%;
 }
 a{

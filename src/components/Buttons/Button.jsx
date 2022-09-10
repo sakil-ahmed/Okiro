@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { StyledBtn } from "./StyledButton";
+import { Link } from "react-router-dom";
 
 export const Button = (props) => {
-  const { type, classname, btntext, to } = props;
+  const { classname, btntext, path } = props;
   return (
     <StyledBtn>
-      <Link to="/" className={`btn ${classname}`}>
+      <Link to="signup" className={`btn ${classname}`}>
         {btntext}
       </Link>
     </StyledBtn>

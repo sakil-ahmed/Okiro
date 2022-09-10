@@ -8,10 +8,13 @@ import { CardData } from "./../components/cards/small-card/CardData";
 import { GlobalCard } from "../components/home/globalCard/GlobalCard";
 import { cardData } from "./../components/cards/big-card/Carddata";
 import { BigCard } from "../components/cards/big-card/BigCard";
+import { Header } from "./../components/header/Header";
+import { Footer } from "./../components/footer/Footer";
 
 export const Home = () => {
   return (
     <StyledHome>
+      <Header />
       <div className="global-main">
         <div className="container">
           <h2 className="global-label global-zigzag">
@@ -97,6 +100,7 @@ export const Home = () => {
       <div className="container">
         <Subscribe />
       </div>
+      <Footer />
     </StyledHome>
   );
 };

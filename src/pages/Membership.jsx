@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { PricingCard } from "../components/cards/pricingCard/PricingCard";
+import { Footer } from "../components/footer/Footer";
+import { Header } from "../components/header/Header";
 import { StyledMemberShip } from "../styles/StyledMemberShip";
 import itemimg from "./../../public/images/item.svg";
 import coverimg from "./../../public/images/membership.jpeg";
@@ -17,6 +19,7 @@ export const Membership = () => {
 
   return (
     <StyledMemberShip>
+      <Header />
       <div className="container">
         <div className="row">
           <div className="membership-section archive-section">
@@ -67,6 +70,7 @@ export const Membership = () => {
           </small>
         </div>
       </div>
+      <Footer />
     </StyledMemberShip>
   );
 };
