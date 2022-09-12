@@ -8,18 +8,21 @@ export const BigCard = (props) => {
     props;
   return (
     <StyledCard>
-      <Link to="/"></Link>
+      <Link to="/blog"></Link>
       <div className={`item-section post tag-story ${classname}`}>
-        <Link to=""></Link>
-        <div className="global-image">
-          <img src={img} alt="" />
-        </div>
+        <Link to="/blog">
+          <div className="global-image">
+            <img src={img} alt="" />
+          </div>
+        </Link>
 
         <div className="card-title">
-          <h3 className="title-text">{title}</h3>
+          <Link to="/blog">
+            <h3 className="title-text">{title}</h3>
+          </Link>
           <div className="global-sections-meta">
-            {author_1 ? <Link to="">{author_1},</Link> : ""}
-            {author_2 ? <Link to=""> {author_2}</Link> : ""}
+            {author_1 ? <Link to="/blog">{author_1},</Link> : ""}
+            {author_2 ? <Link to="/blog"> {author_2}</Link> : ""}
           </div>
         </div>
         <div className="card_btn">

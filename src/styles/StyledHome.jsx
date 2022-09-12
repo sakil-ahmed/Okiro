@@ -113,6 +113,10 @@ export const StyledHome = styled.div`
       position: relative;
       .row {
         article {
+          transition: transform 0.2s ease;
+          &:hover {
+            transform: translateY(-4px);
+          }
           ${media.down("md")} {
             &:nth-child(3) {
               width: 100%;
@@ -187,6 +191,10 @@ export const StyledHome = styled.div`
           overflow: hidden;
           ${media.down("md")} {
             min-width: 210px;
+          }
+
+          &:hover {
+            transform: translateY(-4px);
           }
         }
         .tag_hash_post_card_pool {

@@ -10,6 +10,7 @@ import { cardData } from "./../components/cards/big-card/Carddata";
 import { BigCard } from "../components/cards/big-card/BigCard";
 import { Header } from "./../components/header/Header";
 import { Footer } from "./../components/footer/Footer";
+import mainimg from "./../../public/images/photo-1560141343-966cb5212777.jpeg";
 
 export const Home = () => {
   return (
@@ -45,7 +46,10 @@ export const Home = () => {
               Latest posts
               <img src={itemimg} alt="" />
             </small>
-            <Item />
+            <Item
+              img={mainimg}
+              title="I work best when my space is filled with inspiration"
+            />
           </article>
         </div>
       </div>

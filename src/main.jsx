@@ -8,6 +8,7 @@ import { Membership } from "./pages/Membership";
 import { StyleGuide } from "./pages/StyleGuide";
 import { Signin } from "./pages/Signin";
 import { Signup } from "./pages/Signup";
+import { Blog } from "./pages/Blog";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
@@ -16,10 +17,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
-          <Route path="membership" element={<Membership />} />
-          <Route path="guide" element={<StyleGuide />} />
-          <Route path="signin" element={<Signin />} />
-          <Route path="signup" element={<Signup />} />
+          <Route path="/membership" element={<Membership />} />
+          <Route path="/guide" element={<StyleGuide />} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/blog" element={<Blog />} />
         </Route>
       </Routes>
     </BrowserRouter>

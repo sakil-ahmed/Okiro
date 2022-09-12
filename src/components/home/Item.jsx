@@ -1,19 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { StyledItem } from "./StyledItem";
-import mainumg from "./../../../public/images/photo-1560141343-966cb5212777.jpeg";
+// import mainimg from "./../../../public/images/photo-1560141343-966cb5212777.jpeg";
 import itemimg from "./../../../public/images/item.svg";
 import { Tagbtn } from "../Buttons/Tagbtn";
 import profileimg1 from "../../../public/images/prince-akachi-J1OScm_uHUQ-unsplash.jpg";
 import profileimg2 from "../../../public/images/laura-chouette-1z--Cu8-wXU-unsplash.jpg";
 
-export const Item = () => {
+export const Item = (props) => {
+  const { img, title } = props;
   return (
     <StyledItem>
       <div className="item-container">
-        <Link to="" className="item-image global-image">
+        <Link to="/blog" className="item-image global-image">
           <img
-            src={mainumg}
+            src={img}
             alt="I work best when my space is filled with inspiration"
           />
         </Link>
@@ -23,9 +24,7 @@ export const Item = () => {
           <Tagbtn btntext="Creative" />
         </div>
         <div className="item-title">
-          <Link to="">
-            I work best when my space is filled with inspiration
-          </Link>
+          <Link to="/blog">{title}</Link>
         </div>
         <p className="item-excerpt global-zigzag">
           <img src={itemimg} alt="" />

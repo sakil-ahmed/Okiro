@@ -4,6 +4,11 @@ import { media } from "./../../../styles/Respinsive";
 
 export const CardStyled = styled.article`
   min-height: 221px;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
   ${media.down("md")} {
     width: 33%;
     margin-bottom: 30px;
