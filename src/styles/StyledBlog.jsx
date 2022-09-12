@@ -114,5 +114,45 @@ export const StyledBlog = styled.div`
         padding-left: 32px;
       }
     }
+    .post-share-section {
+      width: 100%;
+      padding-top: 40px;
+      .post-share-wrap {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        a {
+          position: relative;
+          z-index: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 70px;
+          height: 70px;
+          margin: 0 10px;
+          background-color: ${THEME.colors.colorTwo};
+          border-radius: 100px;
+          ${media.down("xsm")} {
+            width: 54px;
+            height: 54px;
+          }
+          svg {
+            height: 24px;
+            width: 24px;
+          }
+        }
+      }
+      .copy-link {
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+      }
+    }
   }
 `;

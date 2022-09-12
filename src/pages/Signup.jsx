@@ -21,6 +21,7 @@ export const Signup = () => {
             name="name"
             btntext="Continue"
             to="/signin"
+            text="1"
           />
         </div>
       </div>

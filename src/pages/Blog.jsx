@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { StyledBlog } from "./../styles/StyledBlog";
 import { Header } from "./../components/header/Header";
 import { Item } from "./../components/home/Item";
@@ -7,8 +7,25 @@ import img from "./../../public/images/photo-1560141343-966cb5212777.jpeg";
 import { Subscribe } from "./../components/footer/Subscribe";
 import blogimg from "../../public/images/blog-img.jpg";
 import blogimg1 from "../../public/images/blog-img1.jpg";
+import { Link } from "react-router-dom";
+import { BsTwitter } from "react-icons/bs";
+import { BsFacebook } from "react-icons/bs";
 
+/**
+ * It returns the JSX code.
+ * @returns The JSX code.
+ */
 export const Blog = () => {
+  /* A function that is used to show a message when the user clicks on the share button. */
+  const showMsg = useRef();
+  const show = () => {
+    showMsg.current.style.opacity = "1";
+    setTimeout(() => {
+      showMsg.current.style.opacity = "0";
+    }, 5000);
+  };
+
+  /* Returning the JSX code. */
   return (
     <StyledBlog>
       <Header />
@@ -80,6 +97,28 @@ export const Blog = () => {
           potest.Utilitatis causa amicitia uae quo sunt excel ores, eo dant
           clariora indicia naturae.
         </p>
+        <div className="post-share-section">
+          <div className="post-share-wrap">
+            <Link to="https://twitter.com/">
+              <BsTwitter />
+            </Link>
+            <Link to="https://www.facebook.com/" target="_blank">
+              <BsFacebook />
+            </Link>
+            <Link to="" onClick={show}>
+              <svg
+                role="img"
+                viewBox="0 0 33 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M27.3999996,13.4004128 L21.7999996,13.4004128 L21.7999996,19 L18.9999996,19 L18.9999996,13.4004128 L13.3999996,13.4004128 L13.3999996,10.6006192 L18.9999996,10.6006192 L18.9999996,5 L21.7999996,5 L21.7999996,10.6006192 L27.3999996,10.6006192 L27.3999996,13.4004128 Z M12,20.87 C7.101,20.87 3.13,16.898 3.13,12 C3.13,7.102 7.101,3.13 12,3.13 C12.091,3.13 12.181,3.139 12.272,3.142 C9.866,5.336 8.347,8.487 8.347,12 C8.347,15.512 9.866,18.662 12.271,20.857 C12.18,20.859 12.091,20.87 12,20.87 Z M20.347,0 C18.882,0 17.484,0.276 16.186,0.756 C14.882,0.271 13.473,0 12,0 C5.372,0 0,5.373 0,12 C0,18.628 5.372,24 12,24 C13.471,24 14.878,23.726 16.181,23.242 C17.481,23.724 18.88,24 20.347,24 C26.975,24 32.347,18.628 32.347,12 C32.347,5.373 26.975,0 20.347,0 Z"></path>
+              </svg>
+            </Link>
+          </div>
+          <small ref={showMsg} className="copy-link">
+            The link has been copied!
+          </small>
+        </div>
       </div>
       <Subscribe />
       <Footer />

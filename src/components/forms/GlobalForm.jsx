@@ -3,7 +3,7 @@ import { StyledForm } from "./Styledform";
 import { Link } from "react-router-dom";
 
 export const GlobalForm = (props) => {
-  const { heading, name, btntext, to } = props;
+  const { heading, name, btntext, to, text } = props;
   return (
     <StyledForm>
       <form action="">
@@ -20,10 +20,17 @@ export const GlobalForm = (props) => {
         <button className="global-button button-clone" type="submit">
           {btntext}
         </button>
-        <small className="global-question">
-          Already have an account?
-          <Link to={to}>Sign in</Link>
-        </small>
+        {text == 1 ? (
+          <small className="global-question">
+            Already have an account?
+            <Link to={to}>Sign in</Link>
+          </small>
+        ) : (
+          <small className="global-question">
+            Don’t have an account yet?
+            <Link to={to}>Sign up</Link>
+          </small>
+        )}
       </form>
     </StyledForm>
   );
