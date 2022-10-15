@@ -10,6 +10,7 @@ import blogimg1 from "../../public/images/blog-img1.jpg";
 import { Link } from "react-router-dom";
 import { BsTwitter } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
+import { motion, useScroll } from "framer-motion";
 
 /**
  * It returns the JSX code.
@@ -26,10 +27,15 @@ export const Blog = () => {
   };
 
   /* Returning the JSX code. */
+  const { scrollYProgress } = useScroll();
   return (
     <StyledBlog>
       <Header />
       <div className="container">
+        <motion.div
+          className="progress-bar"
+          style={{ scaleX: scrollYProgress }}
+        />
         <Item
           img={img}
           title="I work best when my space is filled with inspiration"
@@ -99,12 +105,12 @@ export const Blog = () => {
         </p>
         <div className="post-share-section">
           <div className="post-share-wrap">
-            <Link to="https://twitter.com/">
+            <a href="https://twitter.com/" target="_blank">
               <BsTwitter />
-            </Link>
-            <Link to="https://www.facebook.com/" target="_blank">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
               <BsFacebook />
-            </Link>
+            </a>
             <Link to="" onClick={show}>
               <svg
                 role="img"

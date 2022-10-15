@@ -3,6 +3,16 @@ import { media } from "./Respinsive";
 import { THEME } from "./Themes";
 
 export const StyledBlog = styled.div`
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: ${THEME.colors.btnPrimary};
+    transform-origin: 0%;
+    z-index: 9999;
+  }
   .post-content {
     font-weight: 400;
     max-width: 1280px;
